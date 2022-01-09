@@ -15,8 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from websiteApp import views
-from django.conf import settings
-from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -25,4 +24,3 @@ urlpatterns = [
     path('contacto', views.contacto, name='contacto'),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

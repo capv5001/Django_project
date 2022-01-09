@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from websiteApp import urls
+from website import urls
 
 
 # Create your views here.
