@@ -11,7 +11,7 @@ class Servicio(models.Model):
 
     class Meta:
         verbose_name='servicio'
-        verbose_name_plural='servicio'
+        verbose_name_plural='servicios'
 
     def __str__(self):
         return self.titulo

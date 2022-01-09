@@ -1,6 +1,4 @@
 from django.shortcuts import render,HttpResponse
-from website import urls
-
 
 # Create your views here.
 
@@ -9,12 +7,6 @@ def home(request):
 
 def tienda(request):
     return render(request,'websiteApp/tienda.html')
-
-def blog(request):
-    menu_link=urls.urlpatterns
-    return render(request,'websiteApp/blog.html',{
-        'link':menu_link
-    })
 
 def contacto(request):
     return render(request,'websiteApp/contacto.html')
