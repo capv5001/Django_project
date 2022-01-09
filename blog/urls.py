@@ -18,5 +18,6 @@ from blog import views
 
 
 urlpatterns = [
-    path('blog', views.blog, name='blog'),
+    path('blog', views.Blog, name='blog'),
+    path("blog/categoria/<int:categoria_id>/", views.VistaCategoria , name='categoria'),
 ]
