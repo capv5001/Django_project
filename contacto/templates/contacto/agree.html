@@ -10,11 +10,10 @@
         {% csrf_token %}
         {{formulario.as_table}}
         </table>
-        {% if 'valido' in request.GET %}
-        <p>enviado de manera correcta, gracias</p>
-        {% endif %}
     <input type="submit">
-    </form>
+
+</form>
 </div>
+
 
 {% endblock content %}
