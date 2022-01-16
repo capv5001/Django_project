@@ -23,6 +23,7 @@ urlpatterns = [
     path('',include('blog.urls')),
     path('',include('servicios.urls')),
     path('',include('contacto.urls')),
+    path('',include('tienda.urls')),
     path('',include('websiteApp.urls'))
 ]
 
