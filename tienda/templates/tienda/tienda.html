@@ -2,5 +2,37 @@
 
 {% load static %}
 
+
 {% block content %}
+
+<p>{{importe_total_carro}}</p>
+{% include "carro/widget.html" %}
+
+<div style="display: flex; gap: 20px;">
+
+    {% for producto in productos %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{producto.imagen}}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{producto.nombre}}</h5>
+          <h6 class="card-title">{{producto.categorias}}</h6>
+          {% if producto.disponibilidad %}
+          <span class="badge bg-success">Disponible</span>
+          {% endif %}
+          <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-primary">S/. {{producto.precio}}</a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+
+
+
+
+
+
+
+
 {% endblock content %}

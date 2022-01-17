@@ -1,0 +1,13 @@
+{% if request.session.carro.items %}
+
+{% for key, value in request.session.carro.items %}
+<p style="color:white">{{value.nombre}}</p>
+<p style="color:white">{{value.cantidad}}</p>
+<a href="{% url 'carro:agregar' value.producto_id %}">+</a>
+<a href="{% url 'carro:restar' value.producto_id %}">-</a>
+
+{% endfor %}
+
+{% else %}
+<p style="color:white">sin productos</p>
+{% endif %}
