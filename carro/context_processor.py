@@ -1,5 +1,3 @@
-from .carro import Carro
-
 def importe_total_carro(request):
     total=0
     print(request.session)
